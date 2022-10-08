@@ -4,51 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-  <link rel="stylesheet" href="./quiz1.css" />
-  
-  <script
-    src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-    crossorigin="anonymous"></script>
+  <title>Document</title>
 </head>
-
 <body>
-
-  <div class="card-wrap">
-    
-    <!-- card -->
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front"></div>
-        <div class="flip-card-back">
-          <img src="./img/cat-01.jpg" alt="">
-        </div>
-      </div>
-    </div>
-    
-    <!-- card -->
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front"></div>
-        <div class="flip-card-back">
-          <img src="./img/cat-02.jpg" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-
-
   
-  <script>
+<script>
+const printStars = (count) => {
+  let str = '';
+  let i, j;
 
-  $('.flip-card').on('click', e => {
-    $(e.currentTarget).toggleClass('open');
-  });
+  for(i = 1; i <= count; i++) {
+    for(j = 1; j <= i; j++) {
+      str += '*';
+    }
+    str += '\n';
+  }
 
-  </script>
+  console.log(str);
+}
 
+// Quiz1: 請參考 printStars，並完成 printStars2() 
+// 使其執行時結果如圖： https://imgur.com/56BptSu
 
+const printStars2 = (count) => {
+  // todo...
+}
+</script>
 </body>
-
 </html>
