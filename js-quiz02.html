@@ -15,35 +15,43 @@
 
 <body>
 
+  <!-- 容器 -->
   <div class="card-wrap">
-    
+        
     <!-- card -->
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front"></div>
-        <div class="flip-card-back">
-          <img src="./img/cat-01.jpg" alt="">
-        </div>
-      </div>
-    </div>
-    
-    <!-- card -->
-    <div class="flip-card">
+    <!-- <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front"></div>
         <div class="flip-card-back">
           <img src="./img/cat-02.jpg" alt="">
         </div>
       </div>
-    </div>
+    </div> -->
+    
   </div>
 
 
   <script>
   // Quiz2: 透過迴圈生成 8 * 2 (16) 張牌 (.flip-card)，並隨機打散順序
 
+  // 新增
+  for(let i = 1; i <= 8; i++) {
+    $('.card-wrap').append(`
+    <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front"></div>
+          <div class="flip-card-back">
+            <img src="./img/cat-0${ i }.jpg" alt="">
+          </div>
+        </div>
+      </div>
+  `);
+  }
+
+
   $('.flip-card').on('click', e => {
     $(e.currentTarget).toggleClass('open');
+    
   });
 
   </script>
