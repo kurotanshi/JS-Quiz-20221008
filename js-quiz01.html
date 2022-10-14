@@ -27,7 +27,21 @@ const printStars = (count) => {
 // 使其執行時結果如圖： https://imgur.com/56BptSu
 
 const printStars2 = (count) => {
-  // todo...
+  let result = '';
+  for(let line = 0; line < count; ++line) {
+    let space = '';
+    let asterisk = '';
+    // For space
+    for(let i = line; i < count-1; ++i) {
+      space += ' ';
+    }
+    // For asterisk
+    for(let i = 0; i < line+1; ++i) {
+      asterisk += '*';
+    }
+    result += space + asterisk + '\n';
+  }
+  console.log(result);
 }
 </script>
 </body>
