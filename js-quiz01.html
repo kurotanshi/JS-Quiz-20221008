@@ -26,9 +26,64 @@ const printStars = (count) => {
 // Quiz1: 請參考 printStars，並完成 printStars2() 
 // 使其執行時結果如圖： https://imgur.com/56BptSu
 
-const printStars2 = (count) => {
-  // todo...
-}
+    function printStars2(count) {
+      if (!Number(count) || count < 0) {
+        return;
+      }
+      let str = '';
+      let i, j;
+      
+      for(i = 1; i <= count; i++) {
+        for(j = count; j >= 1; j--) {
+          str += j <= i ? '*' : ' ';
+        }
+        str += '\n';
+      }
+      console.log(str);
+    }
+    //等腰三角形
+    function printStars3(count) {
+      if (!Number(count) || count < 0) {
+        return;
+      }
+      let str = '';
+      let i, j;
+      let rightBound = (count - 1) * 2;
+      let leftBound = -rightBound;
+
+      for(i = 0; i < count; i++) {
+        for(j = leftBound; j <= rightBound; j++) {
+          str += Math.abs(j) <= i ? '*' : ' ';
+        }
+        str += '\n';
+      }
+      console.log(str);
+    }
+    //菱形
+    function printStars4(count) {
+      if (!Number(count) || count < 0) {
+        return;
+      }
+      let str = '';
+      let i, j;
+      let rightBound = (count - 1) * 2;
+      let leftBound = -rightBound;
+      //先畫等腰三角形
+      for(i = 0; i < count; i++) {
+        for(j = leftBound; j <= rightBound; j++) {
+          str += Math.abs(j) <= i ? '*' : ' ';
+        }
+        str += '\n';
+      }
+      //再把等腰三角形倒過來畫
+      for(i = count-2; i >= 0; i--) {
+        for(j = leftBound; j <= rightBound; j++) {
+          str += Math.abs(j) <= i ? '*' : ' ';
+        }
+        str += '\n';
+      }
+      console.log(str);
+    }
 </script>
 </body>
 </html>

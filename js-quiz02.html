@@ -33,15 +33,23 @@
 
   <script>
   // Quiz2: 透過迴圈生成 8 * 2 (16) 張牌 (.flip-card)，並隨機打散順序
-
+  let imageRandom = [];
+  while(imageRandom.length != 16) {
+    let random = Math.floor(Math.random() * 16) + 1;
+    if (!imageRandom.includes(random)) {
+      imageRandom.push(random);
+    }
+  }
+  
   // 新增
-  for(let i = 1; i <= 8; i++) {
+  for(let i = 0; i < imageRandom.length; i++) {
+    let imageSeqNo = (imageRandom[i] % 8) + 1;
     $('.card-wrap').append(`
     <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front"></div>
           <div class="flip-card-back">
-            <img src="./img/cat-0${ i }.jpg" alt="">
+            <img src="./img/cat-0${ imageSeqNo }.jpg" alt="">
           </div>
         </div>
       </div>
