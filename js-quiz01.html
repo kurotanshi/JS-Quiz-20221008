@@ -26,9 +26,92 @@ const printStars = (count) => {
 // Quiz1: 請參考 printStars，並完成 printStars2() 
 // 使其執行時結果如圖： https://imgur.com/56BptSu
 
+// 反直角三角形
+
+//      *
+//     **
+//    ***
+//   ****
+//  *****
+
 const printStars2 = (count) => {
-  // todo...
+
+    let str ='';
+    let i ,j;
+
+    for( i =0; i < count; i++){
+    for( j = count-i; j > 0; j--){
+        document.write('&ensp;');
+    }
+    for( j =0; j < i+1 ;j++){
+        document.write('*');
+    }
+    document.write("<br>");
 }
+
+console.log(str);
+
+
+//   todo...
+}
+
+
+
+
+// 反方向倒直角三角形
+// ******
+//  *****
+//   ****
+//    ***
+//     **
+//      *
+
+// const printStars3 = (count) => {
+
+// let str ='';
+// let i ,j;
+// for( i =0; i < count ; i++){
+//     for(j =0; j < i ; j++){
+//         document.write('&ensp;');
+//     }
+//     for ( j =count-i; j >0 ;j--){
+//     document.write('*');    
+//     }
+//     document.write("<br>");
+// }
+
+
+// console.log(str);
+
+
+// //   todo...
+// }
+
+
+// 倒直角三角形
+// *****
+// ****
+// ***
+// **
+// *
+
+// const printStars2 = (count) => {
+    
+
+//     let str ='';
+//     let i, j;
+
+//     for ( i =1; i <= count ; i++) {
+//         for( j = 0; j <= count-i; j++) {
+//             str +='*';
+//         }
+//         str +='\n';
+//     }
+    
+//     console.log(str);
+
+//   // todo...
+// }
 </script>
 </body>
 </html>
