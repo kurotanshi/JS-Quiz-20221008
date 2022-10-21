@@ -41,14 +41,23 @@
         <div class="flip-card-inner">
           <div class="flip-card-front"></div>
           <div class="flip-card-back">
-            <img src="./img/cat-0${ i }.jpg" alt="">
+            <img src="./img/cat-0${ i }.jpg" alt="cat0${i}">
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front"></div>
+          <div class="flip-card-back">
+            <img src="./img/cat-0${ i }.jpg" alt="cat0${i}">
           </div>
         </div>
       </div>
   `);
   }
-
-
+  const card = document.querySelectorAll('.flip-card') //選取所有card
+  const cardAry = [...card] //轉換成真正的陣列
+  cardAry.sort(() => Math.random() - 0.5); //打亂原有的陣列排序，重新組合
   $('.flip-card').on('click', e => {
     $(e.currentTarget).toggleClass('open');
     
